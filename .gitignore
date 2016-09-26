@@ -1,0 +1,4 @@
+db.sqlite3
+taskbuster/__pycache__
+tb_dev/*
+tb_test/*
