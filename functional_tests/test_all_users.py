@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 from selenium import webdriver
 from django.core.urlresolvers import reverse
 from django.contrib.staticfiles.testing import LiveServerTestCase
@@ -6,7 +7,7 @@ from django.contrib.staticfiles.testing import LiveServerTestCase
 
 class HomeNewVisitorTest(LiveServerTestCase):
     def setUp(self):
-        self.browser = webdriver.Chrome()
+        self.browser = webdriver.Chrome(os.path.dirname(os.path.abspath(__file__)) + "/chromedriver")
         self.browser.implicitly_wait(3)
 
     def tearDown(self):
