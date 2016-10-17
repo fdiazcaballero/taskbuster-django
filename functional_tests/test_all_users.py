@@ -24,4 +24,4 @@ class HomeNewVisitorTest(LiveServerTestCase):
         self.browser.get(self.get_full_url("home"))
         h1 = self.browser.find_element_by_tag_name("h1")
         self.assertEqual(h1.value_of_css_property("color"),
-                         "rgba(200, 50, 255, 1)")
+                         "rgba(0, 0, 0, 1)")
