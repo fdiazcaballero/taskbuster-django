@@ -3,3 +3,4 @@ taskbuster/__pycache__
 tb_dev/*
 tb_test/*
 .idea/
+functional_tests/__pycache__
