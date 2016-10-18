@@ -2,10 +2,10 @@
 import os
 from selenium import webdriver
 from django.core.urlresolvers import reverse
-from django.contrib.staticfiles.testing import LiveServerTestCase
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 
 
-class HomeNewVisitorTest(LiveServerTestCase):
+class HomeNewVisitorTest(StaticLiveServerTestCase):
     def setUp(self):
         self.browser = webdriver.Chrome(os.path.dirname(os.path.abspath(__file__)) + "/chromedriver")
         self.browser.implicitly_wait(3)
@@ -24,4 +24,4 @@ class HomeNewVisitorTest(LiveServerTestCase):
         self.browser.get(self.get_full_url("home"))
         h1 = self.browser.find_element_by_tag_name("h1")
         self.assertEqual(h1.value_of_css_property("color"),
-                         "rgba(0, 0, 0, 1)")
+                         "rgba(200, 50, 255, 1)")
